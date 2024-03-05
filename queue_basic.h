@@ -11,5 +11,4 @@ struct queue {
 };
 typedef struct queue Queue;
 void create_queue(Queue *q);
-void clean_from_finished(Queue Q);
 #endif

@@ -8,10 +8,12 @@ struct cpu {
   float curr_interactive_tick;
   float curr_background_tick;
   bool running;
+  float CLK;
 };
 typedef struct cpu CPU;
 
-void create_CPU(CPU *cpu);
+void create_CPU(CPU *cpu, float CLK);
 void set_proc(CPU *cpu, Process *process);
-void exec(CPU *cpu);
+unsigned short int exec(CPU *cpu);
+
 #endif

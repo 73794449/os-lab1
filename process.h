@@ -20,6 +20,8 @@ struct process {
   bool interactivity;
   float start_time;
   float end_time;
+  float work_time;
+  float wait_time;
   unsigned short int curr_state;
 };
 typedef struct process Process;
@@ -27,5 +29,5 @@ typedef struct process Process;
 void create_process(Process *process, float expected_time, float remaining_time,
                     bool interactivity, float start_time, float end_time,
                     unsigned short int state);
-void execute(Process *process);
+void execute(Process *process, float CLK);
 #endif
